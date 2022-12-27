@@ -1,0 +1,25 @@
+<template>
+<lightning-card title=" keyContact Details">
+<table class="tblColPad" border="1" cellpadding="5" cellspacing="5" style="border-collapse:collapse;"> 
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Type</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <template for:each={records} for:item="conItem">   
+            <tr key={conItem.Id}>
+                <td>{conItem.Name}</td>
+                <td>{conItem.Email__c}</td>
+                <td>{conItem.Mobile__c}</td>
+                <td>{conItem.Type__c}</td>
+            </tr>        
+        </template>
+        </tbody>
+        </table>
+        </lightning-card>
+</template>

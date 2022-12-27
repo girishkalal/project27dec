@@ -1,0 +1,19 @@
+<template>
+<lightning-input type="search"
+onchange={searchName}
+value={accountName}
+label="Accounts Search Names">
+</lightning-input>
+
+<c-new-lwc-child account-list={accountList}
+account-name={accountName}
+onvalueselected={searchKeyContact}
+></c-new-lwc-child>
+<template for:each={keyContact} for:item="item">
+<lightning-button-icon key={id} value={keyContact.id}></lightning-button-icon>
+
+    
+</template>
+
+
+</template>
