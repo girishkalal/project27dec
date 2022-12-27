@@ -1,0 +1,13 @@
+<template>
+   
+    <template if:true={anchorVal}>
+
+        <lightning-pill label={anchorVal} onremove={removePill}></lightning-pill>
+    </template>
+     <template  if:true={accountName} for:each={accountList} for:item="Obj">
+        <a key={Obj.Id}
+        data-value={Obj.Name} 
+        onclick={getAccName} style="display:block; color:black; text-align: center;">
+            {Obj.Name}</a>   
+    </template>
+ </template>

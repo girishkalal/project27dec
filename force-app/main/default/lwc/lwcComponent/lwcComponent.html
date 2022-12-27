@@ -1,0 +1,17 @@
+<template>
+    <lightning-record-edit-form object-api-name={childObjectApiName}>
+    <div class="slds-size_2-of-3 slds-align_absolute-center slds-p-bottom_small">
+        <c-lwc-child-component
+                child-object-api-name="Contact"
+                target-field-api-name="AccountId"
+
+                value={name}
+                onvalueselected={handleSelectedLookup}
+        >
+        </c-lwc-child-component>
+            <span style="font-weight: bold">{name}</span>
+            
+           
+    </div>
+</lightning-record-edit-form >
+</template>
